@@ -28,3 +28,22 @@ while countdown > 0:
     countdown -= 1
 print("Meeting started!")
 print("-" * 30)
+
+# While loop for login system
+
+attempts = 0
+max_attempts = 3
+correct_pin = "4321"
+
+while attempts < max_attempts:
+    pin = input("Enter your PIN: ")
+    attempts += 1
+
+    if pin == correct_pin:
+        print("✅ Access granted!")
+        break
+    else:
+        print(f"❌ Wrong PIN. {max_attempts - attempts} tries left.")
+
+if attempts == max_attempts:
+    print("🔒 Account locked!")
